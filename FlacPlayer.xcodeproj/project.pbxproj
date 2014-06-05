@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D70060FD1714132C001C8FAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70060FC1714132C001C8FAA /* UIKit.framework */; };
+		D70060FF1714132C001C8FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70060FE1714132C001C8FAA /* Foundation.framework */; };
+		D70061011714132C001C8FAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70061001714132C001C8FAA /* CoreGraphics.framework */; };
+		D70061071714132C001C8FAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D70061051714132C001C8FAA /* InfoPlist.strings */; };
+		D70061091714132C001C8FAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D70061081714132C001C8FAA /* main.m */; };
+		D700610D1714132C001C8FAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D700610C1714132C001C8FAA /* AppDelegate.m */; };
+		D700610F1714132C001C8FAA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D700610E1714132C001C8FAA /* Default.png */; };
+		D70061111714132C001C8FAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D70061101714132C001C8FAA /* Default@2x.png */; };
+		D70061131714132C001C8FAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D70061121714132C001C8FAA /* Default-568h@2x.png */; };
+		D70061161714132C001C8FAA /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D70061151714132C001C8FAA /* ViewController.mm */; };
+		D70061191714132D001C8FAA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70061171714132D001C8FAA /* ViewController.xib */; };
+		D700612717141662001C8FAA /* stream_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = D700612617141662001C8FAA /* stream_decoder.c */; };
+		D7006130171420B8001C8FAA /* format.c in Sources */ = {isa = PBXBuildFile; fileRef = D700612F171420B8001C8FAA /* format.c */; };
+		D700613517142600001C8FAA /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = D7006134171425FF001C8FAA /* md5.c */; };
+		D700613817142679001C8FAA /* bitmath.c in Sources */ = {isa = PBXBuildFile; fileRef = D700613717142679001C8FAA /* bitmath.c */; };
+		D700613A171426BD001C8FAA /* bitreader.c in Sources */ = {isa = PBXBuildFile; fileRef = D7006139171426BC001C8FAA /* bitreader.c */; };
+		D700613C171426E8001C8FAA /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = D700613B171426E7001C8FAA /* cpu.c */; };
+		D700613E17142849001C8FAA /* crc.c in Sources */ = {isa = PBXBuildFile; fileRef = D700613D17142849001C8FAA /* crc.c */; };
+		D70061401714294A001C8FAA /* fixed.c in Sources */ = {isa = PBXBuildFile; fileRef = D700613F17142949001C8FAA /* fixed.c */; };
+		D7A775971715178B00C70588 /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = D7A775961715178B00C70588 /* lpc.c */; };
+		D7A77599171517B400C70588 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = D7A77598171517B400C70588 /* memory.c */; };
+		D7A7759C171518C700C70588 /* decodeTest.c in Sources */ = {isa = PBXBuildFile; fileRef = D7A7759B171518C700C70588 /* decodeTest.c */; };
+		D7A775AB17155F0900C70588 /* FlacDecompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7A775A917155F0900C70588 /* FlacDecompress.cpp */; };
+		D7A775AE17166CE100C70588 /* APEPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7A775AD17166CE100C70588 /* APEPlayer.mm */; };
+		D7A775B017166D1700C70588 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A775AF17166D1700C70588 /* AudioToolbox.framework */; };
+		D7A775B417166DE900C70588 /* rootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7A775B217166DE900C70588 /* rootViewController.mm */; };
+		D7A775B517166DE900C70588 /* rootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A775B317166DE900C70588 /* rootViewController.xib */; };
+		D7D61E6D171690BE004581DA /* replaygain.c in Sources */ = {isa = PBXBuildFile; fileRef = D7D61E6C171690BD004581DA /* replaygain.c */; };
+		D7D61E701716926B004581DA /* replaygain_analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = D7D61E6F1716926B004581DA /* replaygain_analysis.c */; };
+		D7D61E7317169352004581DA /* metadata_object.c in Sources */ = {isa = PBXBuildFile; fileRef = D7D61E7217169352004581DA /* metadata_object.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D70060F81714132C001C8FAA /* FlacPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlacPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70060FC1714132C001C8FAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D70060FE1714132C001C8FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D70061001714132C001C8FAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D70061041714132C001C8FAA /* FlacPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlacPlayer-Info.plist"; sourceTree = "<group>"; };
+		D70061061714132C001C8FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D70061081714132C001C8FAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D700610A1714132C001C8FAA /* FlacPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlacPlayer-Prefix.pch"; sourceTree = "<group>"; };
+		D700610B1714132C001C8FAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D700610C1714132C001C8FAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D700610E1714132C001C8FAA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D70061101714132C001C8FAA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D70061121714132C001C8FAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D70061141714132C001C8FAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D70061151714132C001C8FAA /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		D70061181714132D001C8FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		D700611F171414FA001C8FAA /* stream_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stream_decoder.h; path = include/FLAC/stream_decoder.h; sourceTree = "<group>"; };
+		D70061221714154D001C8FAA /* export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = export.h; path = include/FLAC/export.h; sourceTree = "<group>"; };
+		D70061231714154D001C8FAA /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = format.h; path = include/FLAC/format.h; sourceTree = "<group>"; };
+		D700612617141662001C8FAA /* stream_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream_decoder.c; sourceTree = "<group>"; };
+		D7006128171416A2001C8FAA /* ordinals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ordinals.h; sourceTree = "<group>"; };
+		D7006129171416DE001C8FAA /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assert.h; sourceTree = "<group>"; };
+		D700612D17141D2D001C8FAA /* stream_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stream_decoder.h; path = src/libFLAC/include/protected/stream_decoder.h; sourceTree = "<group>"; };
+		D700612E17141EB1001C8FAA /* bitreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bitreader.h; path = src/libFLAC/include/private/bitreader.h; sourceTree = "<group>"; };
+		D700612F171420B8001C8FAA /* format.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = format.c; path = src/libFLAC/format.c; sourceTree = "<group>"; };
+		D7006134171425FF001C8FAA /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = md5.c; path = src/libFLAC/md5.c; sourceTree = "<group>"; };
+		D700613617142631001C8FAA /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5.h; path = src/libFLAC/include/private/md5.h; sourceTree = "<group>"; };
+		D700613717142679001C8FAA /* bitmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitmath.c; path = src/libFLAC/bitmath.c; sourceTree = "<group>"; };
+		D7006139171426BC001C8FAA /* bitreader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitreader.c; path = src/libFLAC/bitreader.c; sourceTree = "<group>"; };
+		D700613B171426E7001C8FAA /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cpu.c; path = src/libFLAC/cpu.c; sourceTree = "<group>"; };
+		D700613D17142849001C8FAA /* crc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc.c; path = src/libFLAC/crc.c; sourceTree = "<group>"; };
+		D700613F17142949001C8FAA /* fixed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fixed.c; path = src/libFLAC/fixed.c; sourceTree = "<group>"; };
+		D7A775961715178B00C70588 /* lpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc.c; path = src/libFLAC/lpc.c; sourceTree = "<group>"; };
+		D7A77598171517B400C70588 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memory.c; path = src/libFLAC/memory.c; sourceTree = "<group>"; };
+		D7A7759B171518C700C70588 /* decodeTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decodeTest.c; sourceTree = "<group>"; };
+		D7A7759D1715191F00C70588 /* decodeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = decodeTest.h; sourceTree = "<group>"; };
+		D7A775A917155F0900C70588 /* FlacDecompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlacDecompress.cpp; path = Class/FlacDecompress.cpp; sourceTree = "<group>"; };
+		D7A775AA17155F0900C70588 /* FlacDecompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlacDecompress.h; path = Class/FlacDecompress.h; sourceTree = "<group>"; };
+		D7A775AC17166CE000C70588 /* APEPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEPlayer.h; sourceTree = "<group>"; };
+		D7A775AD17166CE100C70588 /* APEPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = APEPlayer.mm; sourceTree = "<group>"; };
+		D7A775AF17166D1700C70588 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D7A775B117166DE900C70588 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
+		D7A775B217166DE900C70588 /* rootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rootViewController.mm; sourceTree = "<group>"; };
+		D7A775B317166DE900C70588 /* rootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = rootViewController.xib; sourceTree = "<group>"; };
+		D7D61E691716902E004581DA /* replaygain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = replaygain.h; path = include/share/grabbag/replaygain.h; sourceTree = "<group>"; };
+		D7D61E6C171690BD004581DA /* replaygain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = replaygain.c; path = src/share/grabbag/replaygain.c; sourceTree = "<group>"; };
+		D7D61E6F1716926B004581DA /* replaygain_analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = replaygain_analysis.c; path = src/share/replaygain_analysis/replaygain_analysis.c; sourceTree = "<group>"; };
+		D7D61E71171692C7004581DA /* replaygain_analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = replaygain_analysis.h; path = include/share/replaygain_analysis.h; sourceTree = "<group>"; };
+		D7D61E7217169352004581DA /* metadata_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = metadata_object.c; path = src/libFLAC/metadata_object.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D70060F51714132C001C8FAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7A775B017166D1700C70588 /* AudioToolbox.framework in Frameworks */,
+				D70060FD1714132C001C8FAA /* UIKit.framework in Frameworks */,
+				D70060FF1714132C001C8FAA /* Foundation.framework in Frameworks */,
+				D70061011714132C001C8FAA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D70060ED1714132C001C8FAA = {
+			isa = PBXGroup;
+			children = (
+				D7A775AF17166D1700C70588 /* AudioToolbox.framework */,
+				D70061021714132C001C8FAA /* FlacPlayer */,
+				D70060FB1714132C001C8FAA /* Frameworks */,
+				D70060F91714132C001C8FAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D70060F91714132C001C8FAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D70060F81714132C001C8FAA /* FlacPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D70060FB1714132C001C8FAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D70060FC1714132C001C8FAA /* UIKit.framework */,
+				D70060FE1714132C001C8FAA /* Foundation.framework */,
+				D70061001714132C001C8FAA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D70061021714132C001C8FAA /* FlacPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D7A7759A171518A400C70588 /* TestCode */,
+				D7006124171415C4001C8FAA /* src */,
+				D700612017141501001C8FAA /* include */,
+				D700610B1714132C001C8FAA /* AppDelegate.h */,
+				D700610C1714132C001C8FAA /* AppDelegate.m */,
+				D70061141714132C001C8FAA /* ViewController.h */,
+				D70061151714132C001C8FAA /* ViewController.mm */,
+				D70061171714132D001C8FAA /* ViewController.xib */,
+				D7A775B117166DE900C70588 /* rootViewController.h */,
+				D7A775B217166DE900C70588 /* rootViewController.mm */,
+				D7A775B317166DE900C70588 /* rootViewController.xib */,
+				D70061031714132C001C8FAA /* Supporting Files */,
+			);
+			path = FlacPlayer;
+			sourceTree = "<group>";
+		};
+		D70061031714132C001C8FAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D70061041714132C001C8FAA /* FlacPlayer-Info.plist */,
+				D70061051714132C001C8FAA /* InfoPlist.strings */,
+				D70061081714132C001C8FAA /* main.m */,
+				D700610A1714132C001C8FAA /* FlacPlayer-Prefix.pch */,
+				D700610E1714132C001C8FAA /* Default.png */,
+				D70061101714132C001C8FAA /* Default@2x.png */,
+				D70061121714132C001C8FAA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D700612017141501001C8FAA /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E671716901B004581DA /* share */,
+				D70061211714151E001C8FAA /* FLAC */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		D70061211714151E001C8FAA /* FLAC */ = {
+			isa = PBXGroup;
+			children = (
+				D7006129171416DE001C8FAA /* assert.h */,
+				D7006128171416A2001C8FAA /* ordinals.h */,
+				D70061221714154D001C8FAA /* export.h */,
+				D70061231714154D001C8FAA /* format.h */,
+				D700611F171414FA001C8FAA /* stream_decoder.h */,
+			);
+			name = FLAC;
+			sourceTree = "<group>";
+		};
+		D7006124171415C4001C8FAA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E6A171690A3004581DA /* share */,
+				D7006125171415D2001C8FAA /* libFLAC */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D7006125171415D2001C8FAA /* libFLAC */ = {
+			isa = PBXGroup;
+			children = (
+				D700612A17141CFD001C8FAA /* include */,
+				D700612617141662001C8FAA /* stream_decoder.c */,
+				D700612F171420B8001C8FAA /* format.c */,
+				D700613717142679001C8FAA /* bitmath.c */,
+				D7006134171425FF001C8FAA /* md5.c */,
+				D7006139171426BC001C8FAA /* bitreader.c */,
+				D700613B171426E7001C8FAA /* cpu.c */,
+				D700613D17142849001C8FAA /* crc.c */,
+				D700613F17142949001C8FAA /* fixed.c */,
+				D7A775961715178B00C70588 /* lpc.c */,
+				D7A77598171517B400C70588 /* memory.c */,
+				D7D61E7217169352004581DA /* metadata_object.c */,
+			);
+			name = libFLAC;
+			sourceTree = "<group>";
+		};
+		D700612A17141CFD001C8FAA /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D700612C17141D13001C8FAA /* protected */,
+				D700612B17141D09001C8FAA /* private */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		D700612B17141D09001C8FAA /* private */ = {
+			isa = PBXGroup;
+			children = (
+				D700613617142631001C8FAA /* md5.h */,
+				D700612E17141EB1001C8FAA /* bitreader.h */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		D700612C17141D13001C8FAA /* protected */ = {
+			isa = PBXGroup;
+			children = (
+				D700612D17141D2D001C8FAA /* stream_decoder.h */,
+			);
+			name = protected;
+			sourceTree = "<group>";
+		};
+		D7A7759A171518A400C70588 /* TestCode */ = {
+			isa = PBXGroup;
+			children = (
+				D7A775A917155F0900C70588 /* FlacDecompress.cpp */,
+				D7A775AA17155F0900C70588 /* FlacDecompress.h */,
+				D7A7759B171518C700C70588 /* decodeTest.c */,
+				D7A7759D1715191F00C70588 /* decodeTest.h */,
+				D7A775AC17166CE000C70588 /* APEPlayer.h */,
+				D7A775AD17166CE100C70588 /* APEPlayer.mm */,
+			);
+			name = TestCode;
+			sourceTree = "<group>";
+		};
+		D7D61E671716901B004581DA /* share */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E71171692C7004581DA /* replaygain_analysis.h */,
+				D7D61E6817169023004581DA /* grabbag */,
+			);
+			name = share;
+			sourceTree = "<group>";
+		};
+		D7D61E6817169023004581DA /* grabbag */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E691716902E004581DA /* replaygain.h */,
+			);
+			name = grabbag;
+			sourceTree = "<group>";
+		};
+		D7D61E6A171690A3004581DA /* share */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E6E17169245004581DA /* replaygain_analysis */,
+				D7D61E6B171690AD004581DA /* grabbag */,
+			);
+			name = share;
+			sourceTree = "<group>";
+		};
+		D7D61E6B171690AD004581DA /* grabbag */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E6C171690BD004581DA /* replaygain.c */,
+			);
+			name = grabbag;
+			sourceTree = "<group>";
+		};
+		D7D61E6E17169245004581DA /* replaygain_analysis */ = {
+			isa = PBXGroup;
+			children = (
+				D7D61E6F1716926B004581DA /* replaygain_analysis.c */,
+			);
+			name = replaygain_analysis;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D70060F71714132C001C8FAA /* FlacPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D700611C1714132D001C8FAA /* Build configuration list for PBXNativeTarget "FlacPlayer" */;
+			buildPhases = (
+				D70060F41714132C001C8FAA /* Sources */,
+				D70060F51714132C001C8FAA /* Frameworks */,
+				D70060F61714132C001C8FAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlacPlayer;
+			productName = FlacPlayer;
+			productReference = D70060F81714132C001C8FAA /* FlacPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D70060EF1714132C001C8FAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = buct;
+			};
+			buildConfigurationList = D70060F21714132C001C8FAA /* Build configuration list for PBXProject "FlacPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D70060ED1714132C001C8FAA;
+			productRefGroup = D70060F91714132C001C8FAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D70060F71714132C001C8FAA /* FlacPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D70060F61714132C001C8FAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70061071714132C001C8FAA /* InfoPlist.strings in Resources */,
+				D700610F1714132C001C8FAA /* Default.png in Resources */,
+				D70061111714132C001C8FAA /* Default@2x.png in Resources */,
+				D70061131714132C001C8FAA /* Default-568h@2x.png in Resources */,
+				D70061191714132D001C8FAA /* ViewController.xib in Resources */,
+				D7A775B517166DE900C70588 /* rootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D70060F41714132C001C8FAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70061091714132C001C8FAA /* main.m in Sources */,
+				D700610D1714132C001C8FAA /* AppDelegate.m in Sources */,
+				D70061161714132C001C8FAA /* ViewController.mm in Sources */,
+				D700612717141662001C8FAA /* stream_decoder.c in Sources */,
+				D7006130171420B8001C8FAA /* format.c in Sources */,
+				D700613517142600001C8FAA /* md5.c in Sources */,
+				D700613817142679001C8FAA /* bitmath.c in Sources */,
+				D700613A171426BD001C8FAA /* bitreader.c in Sources */,
+				D700613C171426E8001C8FAA /* cpu.c in Sources */,
+				D700613E17142849001C8FAA /* crc.c in Sources */,
+				D70061401714294A001C8FAA /* fixed.c in Sources */,
+				D7A775971715178B00C70588 /* lpc.c in Sources */,
+				D7A77599171517B400C70588 /* memory.c in Sources */,
+				D7A7759C171518C700C70588 /* decodeTest.c in Sources */,
+				D7A775AB17155F0900C70588 /* FlacDecompress.cpp in Sources */,
+				D7A775AE17166CE100C70588 /* APEPlayer.mm in Sources */,
+				D7A775B417166DE900C70588 /* rootViewController.mm in Sources */,
+				D7D61E6D171690BE004581DA /* replaygain.c in Sources */,
+				D7D61E701716926B004581DA /* replaygain_analysis.c in Sources */,
+				D7D61E7317169352004581DA /* metadata_object.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D70061051714132C001C8FAA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D70061061714132C001C8FAA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D70061171714132D001C8FAA /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D70061181714132D001C8FAA /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D700611A1714132D001C8FAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D700611B1714132D001C8FAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D700611D1714132D001C8FAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlacPlayer/FlacPlayer-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					./FlacPlayer/src/libFLAC/include,
+					./FlacPlayer/include,
+				);
+				INFOPLIST_FILE = "FlacPlayer/FlacPlayer-Info.plist";
+				"OTHER_TEST_FLAGS[sdk=*]" = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = NO;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D700611E1714132D001C8FAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlacPlayer/FlacPlayer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					./FlacPlayer/src/libFLAC/include,
+					./FlacPlayer/include,
+				);
+				INFOPLIST_FILE = "FlacPlayer/FlacPlayer-Info.plist";
+				OTHER_TEST_FLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = NO;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D70060F21714132C001C8FAA /* Build configuration list for PBXProject "FlacPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D700611A1714132D001C8FAA /* Debug */,
+				D700611B1714132D001C8FAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D700611C1714132D001C8FAA /* Build configuration list for PBXNativeTarget "FlacPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D700611D1714132D001C8FAA /* Debug */,
+				D700611E1714132D001C8FAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D70060EF1714132C001C8FAA /* Project object */;
+}
