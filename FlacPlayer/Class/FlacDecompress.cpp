@@ -13,7 +13,7 @@
 
 extern "C"
 {
-#include "share/grabbag/replaygain.h"
+//#include "share/grabbag/replaygain.h"
 }
 
 #ifndef min
@@ -55,11 +55,11 @@ static void metadata_callback(const FLAC__StreamDecoder *decoder, const FLAC__St
     {
         double  reference, gain, peak;
         FLAC__bool album_mode = false;
-        if (grabbag__replaygain_load_from_vorbiscomment(metadata, album_mode, false, &reference, &gain, &peak)) {
-            fprintf(stderr, "has replaygain    : yes");
-        } else {
-            fprintf(stderr, "has replaygain    : no");
-        }
+//        if (grabbag__replaygain_load_from_vorbiscomment(metadata, album_mode, false, &reference, &gain, &peak)) {
+//            fprintf(stderr, "has replaygain    : yes");
+//        } else {
+//            fprintf(stderr, "has replaygain    : no");
+//        }
     }
 
     

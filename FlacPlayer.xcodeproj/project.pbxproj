@@ -34,7 +34,6 @@
 		D7A775B017166D1700C70588 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A775AF17166D1700C70588 /* AudioToolbox.framework */; };
 		D7A775B417166DE900C70588 /* rootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7A775B217166DE900C70588 /* rootViewController.mm */; };
 		D7A775B517166DE900C70588 /* rootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A775B317166DE900C70588 /* rootViewController.xib */; };
-		D7D61E6D171690BE004581DA /* replaygain.c in Sources */ = {isa = PBXBuildFile; fileRef = D7D61E6C171690BD004581DA /* replaygain.c */; };
 		D7D61E701716926B004581DA /* replaygain_analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = D7D61E6F1716926B004581DA /* replaygain_analysis.c */; };
 		D7D61E7317169352004581DA /* metadata_object.c in Sources */ = {isa = PBXBuildFile; fileRef = D7D61E7217169352004581DA /* metadata_object.c */; };
 /* End PBXBuildFile section */
@@ -84,8 +83,6 @@
 		D7A775B117166DE900C70588 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
 		D7A775B217166DE900C70588 /* rootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rootViewController.mm; sourceTree = "<group>"; };
 		D7A775B317166DE900C70588 /* rootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = rootViewController.xib; sourceTree = "<group>"; };
-		D7D61E691716902E004581DA /* replaygain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = replaygain.h; path = include/share/grabbag/replaygain.h; sourceTree = "<group>"; };
-		D7D61E6C171690BD004581DA /* replaygain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = replaygain.c; path = src/share/grabbag/replaygain.c; sourceTree = "<group>"; };
 		D7D61E6F1716926B004581DA /* replaygain_analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = replaygain_analysis.c; path = src/share/replaygain_analysis/replaygain_analysis.c; sourceTree = "<group>"; };
 		D7D61E71171692C7004581DA /* replaygain_analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = replaygain_analysis.h; path = include/share/replaygain_analysis.h; sourceTree = "<group>"; };
 		D7D61E7217169352004581DA /* metadata_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = metadata_object.c; path = src/libFLAC/metadata_object.c; sourceTree = "<group>"; };
@@ -267,7 +264,6 @@
 		D7D61E6817169023004581DA /* grabbag */ = {
 			isa = PBXGroup;
 			children = (
-				D7D61E691716902E004581DA /* replaygain.h */,
 			);
 			name = grabbag;
 			sourceTree = "<group>";
@@ -284,7 +280,6 @@
 		D7D61E6B171690AD004581DA /* grabbag */ = {
 			isa = PBXGroup;
 			children = (
-				D7D61E6C171690BD004581DA /* replaygain.c */,
 			);
 			name = grabbag;
 			sourceTree = "<group>";
@@ -381,7 +376,6 @@
 				D7A775AB17155F0900C70588 /* FlacDecompress.cpp in Sources */,
 				D7A775AE17166CE100C70588 /* APEPlayer.mm in Sources */,
 				D7A775B417166DE900C70588 /* rootViewController.mm in Sources */,
-				D7D61E6D171690BE004581DA /* replaygain.c in Sources */,
 				D7D61E701716926B004581DA /* replaygain_analysis.c in Sources */,
 				D7D61E7317169352004581DA /* metadata_object.c in Sources */,
 			);
